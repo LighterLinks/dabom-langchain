@@ -1,0 +1,22 @@
+[project]
+name = "dabom-langchain"
+version = "0.1.1"
+authors = [
+  { name="Dongho Yee", email="dongho3929@gmail.com" },
+]
+description = "Langchain extension for Dabom Search API"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "langchain",
+  "aiohttp"
+]
+
+[project.urls]
+Homepage = "https://dabomai.com"
