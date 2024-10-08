@@ -3,7 +3,7 @@ from typing import Dict, List, Optional
 
 import aiohttp
 import requests
-from langchain_core.pydantic_v1 import BaseModel, Extra, SecretStr, root_validator
+from pydantic import BaseModel, ConfigDict, SecretStr, model_validator
 from langchain_core.utils import get_from_dict_or_env
 
 DABOM_API_URL = "https://api.dabomai.com"
@@ -14,12 +14,12 @@ class DabomSearchAPIWrapper(BaseModel):
 
     dabom_api_key: SecretStr
 
-    class Config:
-        """Configuration for this pydantic object."""
+    model_config = ConfigDict(
+        extra="forbid",
+    )
 
-        extra = Extra.forbid
-
-    @root_validator(pre=True)
+    @model_validator(mode="before")
+    @classmethod
     def validate_environment(cls, values: Dict) -> Dict:
         """Validate that api key and endpoint exists in environment."""
         dabom_api_key = get_from_dict_or_env(

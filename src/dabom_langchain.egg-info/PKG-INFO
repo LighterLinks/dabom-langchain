@@ -1,9 +1,9 @@
 Metadata-Version: 2.1
 Name: dabom-langchain
-Version: 0.1.1
+Version: 0.1.6
 Summary: Langchain extension for Dabom Search API
 Author-email: Dongho Yee <dongho3929@gmail.com>
-Project-URL: Homepage, https://dabomai.com
+Project-URL: Homepage, https://github.com/LighterLinks/dabom-langchain.git
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
